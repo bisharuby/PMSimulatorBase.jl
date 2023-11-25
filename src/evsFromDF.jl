@@ -56,7 +56,7 @@ function df2evs(dfin::AbstractDataFrame)
     instancevec = PMInstance[]
     for idtmp in ids
         df_id = @chain df begin
-            @filter(ID == !!idtmp)
+            @filter(ID == !idtmp)
         end
         ev_inputs_id = PMInput[]
         ev_updates_id = PMUpdate[]
